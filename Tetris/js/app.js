@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const scoreDisplay = document.querySelector('.score-display')
 
   const linesDisplay = document.querySelector('.lines-score')
-
   let currentIndex = 0
 
   let currentRotation = 0
@@ -88,8 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', control)
 
-  //Tetrominoes
-
+  //The Tetrominoes
   const lTetromino = [
     [1, GRID_WIDTH + 1, GRID_WIDTH * 2 + 1, 2],
     [GRID_WIDTH, GRID_WIDTH + 1, GRID_WIDTH + 2, GRID_WIDTH * 2 + 2],
@@ -129,13 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //Randomly Select Tetromino
   let random = Math.floor(Math.random() * theTetrominoes.length)
-
   let current = theTetrominoes[random][currentRotation]
 
 
   //move the Tetromino moveDown
   let currentPosition = 4
-
   //draw the shape
   function draw() {
     current.forEach(index => {
@@ -282,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
+  //Styling eventListeners
   hamburgerBtn.addEventListener('click', () => {
     menu.style.display = 'flex'
   })
